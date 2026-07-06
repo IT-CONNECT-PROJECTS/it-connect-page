@@ -9,7 +9,7 @@ import FormatsSection from '@/_sections/formatsSection';
 import PartnersSection from '@/_sections/partnersSection';
 import EventsSection from '@/_sections/eventsSection';
 // import ClosestEventSection from '@/_sections/closestEventSection';
-import StandupFestSection from '@/_sections/standupFestSection';
+// import StandupFestSection from '@/_sections/standupFestSection';
 import ImpactSection from '@/_sections/impactSection';
 import HistorySignSection from '@/_sections/historySignSection';
 import SponsorsSection from '@/_sections/sponsorsSection';
@@ -39,7 +39,7 @@ export default function Home() {
         <div className={styles.centered}>
           <div id="closest-event" />
           {/* <ClosestEventSection /> — summer pause */}
-          <StandupFestSection />
+          {/* <StandupFestSection /> — event ended */}
           <ImpactSection />
           <div id="formats" />
           <FormatsSection />

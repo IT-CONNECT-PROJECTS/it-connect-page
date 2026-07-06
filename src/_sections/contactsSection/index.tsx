@@ -6,6 +6,7 @@ import Image from 'next/image';
 import telegramIcon from '@/_assets/telegramIcon.svg';
 import linkedinIcon from '@/_assets/linkedinIcon.svg';
 import instagramIcon from '@/_assets/instagramIcon.svg';
+import mailIcon from '@/_assets/mailIcon.svg';
 
 import styles from './styles.module.sass';
 
@@ -24,6 +25,11 @@ export const contactsArray = [
     title: 'Telegram',
     url: 'https://t.me/itconnectbelgrade',
     icon: telegramIcon
+  },
+  {
+    title: 'Email',
+    url: 'mailto:itconnectsocialnetworks@gmail.com',
+    icon: mailIcon
   }
 ];
 
