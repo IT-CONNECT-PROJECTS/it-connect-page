@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Col, Flex, List, Row, Statistic, Tag } from 'antd';
 
@@ -127,9 +126,10 @@ export default function ModalCardContent({ event }: {event: Meetup | Network | n
           />
         </>
       )}
-      <Link
+      <a
         href={event.link}
         target="_blank"
+        rel="noreferrer"
         style={{
           marginTop: '20px',
           fontWeight: 'bold',
@@ -137,7 +137,7 @@ export default function ModalCardContent({ event }: {event: Meetup | Network | n
         }}
       >
         Photo album
-      </Link>
+      </a>
     </Flex>
   );
 }
