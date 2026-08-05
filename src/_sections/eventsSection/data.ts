@@ -33,7 +33,7 @@ export type Network = {
 export const events: (Meetup | Network)[] = [
   {
     title: 'Trash TV Party',
-    date: '31.10.2025',
+    date: '04.04.2025',
     description: [
       'Интуиция',
       'Конкурс коллажей',
