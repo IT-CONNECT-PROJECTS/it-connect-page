@@ -131,5 +131,17 @@ export const members: Member[] = [
     avatar: 'nastya1_b9gnnp',
     avatarHovered: 'nastya2_qrmtsw',
   },
+  {
+    name: 'Ekaterina Koroleva',
+    role: 'Fullstack QA',
+    photo: 'ekaterinaPhoto',
+    contacts: {
+      linkedin: 'kate-koroleva',
+      telegram: 'FennyKat',
+    },
+    description: 'Finds the cracks before they become problems - and still has time for a laugh about it',
+    avatar: 'Katya_laq66l',
+    avatarHovered: 'Katya2_xjb9jq',
+  },
 
 ];
