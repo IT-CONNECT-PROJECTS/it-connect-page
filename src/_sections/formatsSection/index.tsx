@@ -16,7 +16,7 @@ export default function FormatSection() {
   const formatsComponents = data.map((format, index) => {
     return (
       <Card
-        bordered={false}
+        variant="borderless"
         key={format.title}
         className={styles.formatCard}
         hoverable
@@ -45,7 +45,7 @@ export default function FormatSection() {
   return (
     <section className={styles.formatsSection}>
       {isMobile && (
-        <div className={styles.title}>FORMATS</div>
+        <h2 className={styles.title}>FORMATS</h2>
       )}
       {isMobile ?
         (
@@ -63,7 +63,7 @@ export default function FormatSection() {
         width={'fit-content'}
         footer={false}
         className={styles.modal}
-        destroyOnClose
+        destroyOnHidden
       >
         <EventTypeCard eventType={data[activeIndex || 0]} />
       </Modal>

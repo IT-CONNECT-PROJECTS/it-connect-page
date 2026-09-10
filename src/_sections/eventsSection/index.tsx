@@ -59,7 +59,7 @@ export default function EventsSection() {
             className={styles.image}
             width="302"
             height="200"
-            alt=""
+            alt={`${event.title} — IT Connect event in Belgrade`}
           />
           <div className={styles.eventCard__preview}>
             <div className={styles.date}>
@@ -112,7 +112,7 @@ export default function EventsSection() {
         width={'fit-content'}
         footer={false}
         className={styles.modal}
-        destroyOnClose
+        destroyOnHidden
       >
         {cardIndex !== null && (
           <ModalCardContent event={events[cardIndex]} />

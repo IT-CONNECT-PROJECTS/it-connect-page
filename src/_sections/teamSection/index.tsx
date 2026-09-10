@@ -11,9 +11,9 @@ export default function TeamSection() {
   ));
   return (
     <section className={styles.teamSection}>
-      <h3 className={styles.teamSection__title}>
+      <h2 className={styles.teamSection__title}>
         We connect IT
-      </h3>
+      </h2>
       <div className={styles.cardsWrapper}>
         {cards}
       </div>

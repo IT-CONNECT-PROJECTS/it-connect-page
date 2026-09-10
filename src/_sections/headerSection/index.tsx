@@ -82,11 +82,15 @@ export default function HeaderSection() {
 
   return (
     <header className={styles.headerSection}>
+      <h1 className="visually-hidden">
+        IT Connect — IT community and meetups in Belgrade
+      </h1>
+
       <Image
         src={logo}
         width={478}
         height={485}
-        alt="logo"
+        alt=""
         className={styles.headerSection__logo}
       />
 
@@ -94,7 +98,7 @@ export default function HeaderSection() {
         <div className={styles.textBlock}>
           <Image
             src={text}
-            alt="logo"
+            alt="IT Connect"
             width={!isMobile ? 579 : 300}
             height={!isMobile ? 225 : 130}
             style={{ zIndex: 1 }}
@@ -109,7 +113,7 @@ export default function HeaderSection() {
         <div className={styles.imageBlock}>
           <Image
             src={image}
-            alt="image"
+            alt="IT Connect community meetup in Belgrade"
             width={538 / (isMobile ? 2 : 1)}
             height={538 / (isMobile ? 2 : 1)}
             draggable={false}
@@ -121,14 +125,14 @@ export default function HeaderSection() {
           <Image
             src={figure1}
             className={styles.figure1}
-            alt="image"
+            alt=""
             width={335 / (isMobile ? 2 : 1)}
             height={335 / (isMobile ? 2 : 1)}
             draggable={false}
           />
           <Image
             src={figure2}
-            alt="image"
+            alt=""
             width={181 / (isMobile ? 2 : 1)}
             height={181 / (isMobile ? 2 : 1)}
             draggable={false}
@@ -137,7 +141,7 @@ export default function HeaderSection() {
           <Image
             className={styles.figure3}
             src={figure3}
-            alt="image"
+            alt=""
             width={275 / (isMobile ? 2 : 1)}
             height={408 / (isMobile ? 2 : 1)}
             draggable={false}

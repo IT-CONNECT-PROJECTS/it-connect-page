@@ -7,8 +7,8 @@ export type NavigationLinkType = {
 
 export const navigationLinks: NavigationLinkType[] = [
   {
-    title: 'Closest event',
-    id: 'closest-event',
+    title: 'TEDx',
+    id: 'tedx',
   },
   {
     title: 'Events',

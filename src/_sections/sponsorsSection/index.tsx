@@ -12,9 +12,9 @@ export default function SponsorsSection() {
   ));
   return (
     <section className={styles.sponsorshipSection}>
-      <h3 className={styles.sponsorshipSection_title}>
+      <h2 className={styles.sponsorshipSection_title}>
         Sponsorship proposal
-      </h3>
+      </h2>
       <div className={styles.cardWrapper}>
         {cards}
       </div>

@@ -81,7 +81,7 @@ export default function HighlightsSection() {
         className={styles.modal}
         width={960}
         centered
-        destroyOnClose
+        destroyOnHidden
       >
         <Snow isModal />
         <div className={styles.modalInner}>

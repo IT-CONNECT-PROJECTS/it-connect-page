@@ -11,7 +11,7 @@ export default function TedxSection() {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <div className={styles.title}>TedX Savski Venac</div>
+        <h2 className={styles.title}>TedX Savski Venac</h2>
         <div className={styles.subtitle}>
           October 10, 2026 · Startit Center, Belgrade
         </div>

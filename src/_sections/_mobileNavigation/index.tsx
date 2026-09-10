@@ -12,11 +12,16 @@ export default function MobileNavigation () {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { isMobile } = useViewPort();
 
-  const handleLinkClick = (link: NavigationLinkType) => {
+  const handleLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    link: NavigationLinkType,
+  ) => {
     const homePageComponent = document.getElementById('homePage');
     const anchor = document.getElementById(link.id);
 
     if (!anchor || !homePageComponent) return;
+
+    event.preventDefault();
 
     const top = anchor.offsetTop;
     setDrawerOpen(false);
@@ -47,13 +52,14 @@ export default function MobileNavigation () {
           gap={20}
         >
           {navigationLinks.map((link) => (
-            <div
+            <a
               key={link.title}
+              href={`#${link.id}`}
               className={styles.navigationLink}
-              onClick={() => handleLinkClick(link) }
+              onClick={(event) => handleLinkClick(event, link)}
             >
               {link.title}
-            </div>
+            </a>
           ))}
         </Flex>
       </Drawer>

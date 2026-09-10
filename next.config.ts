@@ -15,6 +15,29 @@ const nextConfig: NextConfig = {
     CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
     CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
   },
+  async headers() {
+    const noIndex = [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }];
+
+    return [
+      { source: '/back-office/:path*', headers: noIndex },
+      { source: '/login', headers: noIndex },
+      { source: '/merch', headers: noIndex },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: '/summer-fest-main',
+        destination: '/no-summer-fest',
+        permanent: true,
+      },
+      {
+        source: '/summer-fest',
+        destination: '/no-summer-fest',
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

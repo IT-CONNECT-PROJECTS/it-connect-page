@@ -55,7 +55,7 @@ export default function ContactSection() {
   return (
     <section className={styles.contactsSection}>
       <Flex vertical style={{ flex: '1 1 auto' }}>
-        <div className={styles.title}>📩 Let’s Collaborate!</div>
+        <h2 className={styles.title}>📩 Let’s Collaborate!</h2>
         <div className={styles.description}>
           {descriptionText}
         </div>

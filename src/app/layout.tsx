@@ -23,9 +23,53 @@ const poppins = Poppins({
   weight: ['500', '700'],
 });
 
+const SITE_URL = 'https://www.itconnect.community';
+const SITE_TITLE = 'IT Connect Belgrade — IT Community & Meetups | 7000+ members';
+const SITE_DESCRIPTION = 'IT Connect is a community of IT professionals in Belgrade: meetups, networking and conferences. IT сообщество и айти митапы в Белграде: 7000+ участников, до 60 событий в год.';
+
 export const metadata: Metadata = {
-  title: 'IT CONNECT',
-  description: 'IT community in Belgrade'
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: '%s | IT Connect Belgrade',
+  },
+  description: SITE_DESCRIPTION,
+  keywords: [
+    'IT сообщество Белград',
+    'айти митапы Белград',
+    'нетворкинг Белград',
+    'IT мероприятия Сербия',
+    'IT community Belgrade',
+    'IT meetup Belgrade',
+    'tech networking Serbia',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    url: '/',
+    siteName: 'IT Connect Belgrade',
+    locale: 'en_RS',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
 };
 
 export default function RootLayout({

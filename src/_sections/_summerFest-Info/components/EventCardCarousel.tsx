@@ -102,7 +102,7 @@ const EventCarousel = () => {
             >
               <Card
                 className={styles.card}
-                bordered={false}
+                variant="borderless"
                 styles={{
                   body: {
                     background: 'transparent',
@@ -153,7 +153,7 @@ const EventCarousel = () => {
             <div key={card.key}>
               <Card
                 className={styles.card}
-                bordered={false}
+                variant="borderless"
                 styles={{
                   body: {
                     background: 'transparent',

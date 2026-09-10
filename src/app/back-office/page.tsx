@@ -15,7 +15,11 @@ import styles from './_styles/styles.module.sass';
 export default function BackOffice() {
   const { closestEvent } = useStore(store => store);
 
-  const content = [
+  const content: {
+    title: string;
+    path?: string;
+    component: React.ReactNode;
+  }[] = [
     {
       title: 'Closest Event',
       path: '/back-office/closestEvent',
@@ -26,10 +30,11 @@ export default function BackOffice() {
     },
     {
       title: 'Events Table',
-      path: '/back-office/events',
       component: EventsTable(),
     }
-  ].map((item) => (
+  ];
+
+  const cards = content.map((item) => (
     <Card
       key={item.title}
       title={item.title}
@@ -37,11 +42,13 @@ export default function BackOffice() {
         flex: '1 1 auto',
         height: 'fit-content',
       }}
-      actions={[
-        <Link href={item.path} key={item.path}>
-          Edit
-        </Link>
-      ]}
+      actions={item.path
+        ? [
+          <Link href={item.path} key={item.path}>
+            Edit
+          </Link>
+        ]
+        : undefined}
     >
       {item.component}
     </Card>
@@ -49,7 +56,7 @@ export default function BackOffice() {
 
   return (
     <div className={styles.dashboard}>
-      {content}
+      {cards}
     </div>
   );
 }

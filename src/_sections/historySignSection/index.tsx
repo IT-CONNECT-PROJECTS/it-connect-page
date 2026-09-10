@@ -14,9 +14,9 @@ export default function HistorySignSection() {
     <section className={styles.signSection}>
       <div className={styles.content}>
         <div className={styles.titleBlock}>
-          <div className={styles.title}>
+          <h2 className={styles.title}>
             Born in Belgrade, built by friends
-          </div>
+          </h2>
           <div className={styles.subtitle}>
             <div>Since 2022, IT Connect has been bringing tech minds together</div>
             <div>to share knowledge and grow</div>

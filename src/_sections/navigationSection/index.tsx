@@ -4,8 +4,6 @@ import { Flex } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { useViewPort } from '@/_hooks';
-
 import { contactsArray } from '@/_sections/contactsSection';
 import Logo from '@/_assets/logo';
 
@@ -14,14 +12,18 @@ import { navigationLinks, NavigationLinkType } from '@/_consts';
 import styles from './styles.module.sass';
 
 export default function NavigationSection() {
-  const { isMobile } = useViewPort();
   const [color, setColor] = useState<'white' | 'black'>('white');
   const navigationHeaderRef = useRef<HTMLDivElement>(null);
-  const handleLinkClick = (link: NavigationLinkType) => {
+  const handleLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    link: NavigationLinkType,
+  ) => {
     const homePageComponent = document.getElementById('homePage');
     const anchor = document.getElementById(link.id);
 
     if (!anchor || !homePageComponent) return;
+
+    event.preventDefault();
 
     const top = anchor.offsetTop;
 
@@ -45,13 +47,14 @@ export default function NavigationSection() {
   }, [navigationHeaderRef]);
 
   const navigationButtons = navigationLinks.map((link) => (
-    <div
+    <a
       key={link.title}
+      href={`#${link.id}`}
       className={styles.navigationLink}
-      onClick={() => handleLinkClick(link) }
+      onClick={(event) => handleLinkClick(event, link)}
     >
       {link.title}
-    </div>
+    </a>
   ));
 
   const contactCards = contactsArray
@@ -90,14 +93,12 @@ export default function NavigationSection() {
             />
           </Flex>
 
-          {!isMobile && (
-            <Flex align="center" gap={43}>
-              <Flex gap={32}>{navigationButtons}</Flex>
-              <Flex align="center" gap={10}>
-                {contactCards}
-              </Flex>
+          <Flex align="center" gap={43} className={styles.desktopMenu}>
+            <Flex gap={32}>{navigationButtons}</Flex>
+            <Flex align="center" gap={10}>
+              {contactCards}
             </Flex>
-          )}
+          </Flex>
         </Flex>
       </div>
     </nav>

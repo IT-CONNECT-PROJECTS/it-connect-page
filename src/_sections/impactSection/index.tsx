@@ -69,18 +69,18 @@ export default function ImpactSection() {
     <section className={styles.impactSection}>
       <div className={styles.content}>
         <div className={styles.titleBlock}>
-          <div className={styles.title}>
+          <h2 className={styles.title}>
             Impact in numbers
-          </div>
+          </h2>
           <div className={styles.subtitle}>
             The milestones we have built together
           </div>
         </div>
 
         <InView onChange={startCounters}/>
-        <div className={styles.statsTitle}>
+        <h3 className={styles.statsTitle}>
           We have more than
-        </div>
+        </h3>
         <div className={styles.statsWrapper}>
           {statsComponents}
         </div>
