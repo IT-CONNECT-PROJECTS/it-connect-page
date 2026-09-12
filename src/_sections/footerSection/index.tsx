@@ -10,6 +10,7 @@ import { imagePrefix } from '@/_consts';
 import styles from './styles.module.sass';
 
 const logoImageUrl ='itConnectLogoLarge';
+const MEDIA_KIT_URL = 'https://drive.google.com/drive/folders/1ZsNbV7p-Tw7PTSZQ2i-5cD06_UMut2yV';
 const contactCards = contactsArray
   .map((contact) => (
     <Link
@@ -93,6 +94,13 @@ const FooterSection = () => (
             href="https://it-conect.notion.site/Rules-and-Values-of-the-IT-Connect-Community-3cd92f4ea08247b7881535ee7e8b8372"
           >
             Rules and Values
+          </Link>
+          <Link
+            href={MEDIA_KIT_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Media Kit
           </Link>
         </Flex>
       </Flex>

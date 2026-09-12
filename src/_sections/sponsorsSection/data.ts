@@ -53,7 +53,7 @@ export const sponsorsSectionData: SponsorCardData[] = [
     description: 'Sponsor TEDx Savski Venac — October 10, 2026 at Startit Center, Belgrade. 100 seats for leaders and innovators.',
     preferences: [
       'Exclusive audience of 100 decision-makers',
-      'Logo on the TEDx Talks YouTube channel',
+      'Logo and mentions on TEDx event',
       'TED + IT Connect brand association',
       'Bronze to Presenting Partner packages'
     ],
