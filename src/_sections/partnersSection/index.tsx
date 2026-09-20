@@ -24,6 +24,8 @@ const logos = [
   { id: 'Лого_KO-KO_без_фона_agt7ed', src: 'kokologo', name: 'KO-KO' },
   { id: 'Yandex_logo_2021_Russian_io4snr.svg', src: 'Yandex_logo_2021_Russian_io4snr.svg', name: 'Yandex' },
   { id: 'startit_logo-vertikalni-crni_RGB_yhewer', src: 'startit_logo-vertikalni-crni_RGB_yhewer', name: 'Startit' },
+  { id: 'icthub-logo_2x_wvatml', src: 'icthub-logo_2x_wvatml', name: 'ICT Hub' },
+  { id: 'Logo_i_text_transparent_pka3gq', src: 'Logo_i_text_transparent_pka3gq', name: 'Petlja' },
 ];
 
 export default function PartnersSection() {
