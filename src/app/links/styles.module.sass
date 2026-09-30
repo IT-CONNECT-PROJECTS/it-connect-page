@@ -1,0 +1,114 @@
+$accent: #7030A0
+$blue: #00D6E7
+$dark: #1b0b2b
+
+.page
+  width: 100%
+  height: 100vh
+  height: 100dvh
+  flex-shrink: 0
+  overflow: hidden
+  display: flex
+  justify-content: center
+  padding: 48px 16px 0
+  color: white
+  background: radial-gradient(circle at 20% 0%, rgba($blue, 0.25), transparent 45%), radial-gradient(circle at 100% 100%, rgba($accent, 0.6), transparent 55%), $dark
+
+.content
+  width: 100%
+  max-width: 440px
+  height: 100%
+  display: flex
+  flex-direction: column
+  gap: 32px
+
+.header
+  flex-shrink: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 20px
+  text-align: center
+
+.description
+  font-family: var(--font-onest)
+  font-size: 16px
+  line-height: 1.5
+  opacity: 0.85
+
+.links
+  flex: 1
+  min-height: 0
+  overflow-y: auto
+  overscroll-behavior: contain
+  display: flex
+  flex-direction: column
+  gap: 32px
+  padding-bottom: 32px
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+    display: none
+
+.section
+  display: flex
+  flex-direction: column
+  gap: 12px
+
+.sectionTitle
+  font-family: var(--font-poppins)
+  font-size: 14px
+  font-weight: 500
+  text-transform: uppercase
+  letter-spacing: 1.5px
+  opacity: 0.6
+  text-align: center
+
+.linkButton
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  min-height: 56px
+  padding: 12px 56px
+  border-radius: 16px
+  border: 1px solid rgba(255, 255, 255, 0.15)
+  background: rgba(255, 255, 255, 0.08)
+  font-family: var(--font-onest)
+  font-size: 17px
+  font-weight: 600
+  transition: transform 0.15s ease, background 0.15s ease
+
+  &:hover
+    background: rgba(255, 255, 255, 0.14)
+
+  &:active
+    transform: scale(0.98)
+
+.linkButton_accent
+  border-color: transparent
+  background: linear-gradient(90deg, $accent, #9311F5)
+
+  &:hover
+    background: linear-gradient(90deg, #7d3ab0, #a02bff)
+
+.linkIcon
+  position: absolute
+  left: 18px
+  top: 50%
+  transform: translateY(-50%)
+  width: 24px
+  height: 24px
+  font-size: 20px
+  line-height: 24px
+  text-align: center
+
+.linkTitle
+  text-align: center
+
+.footer
+  margin-top: auto
+  text-align: center
+  font-family: var(--font-onest)
+  font-size: 13px
+  opacity: 0.5

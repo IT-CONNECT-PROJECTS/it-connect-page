@@ -5,12 +5,11 @@ import {  Flex } from 'antd';
 
 import { contactsArray } from '@/_sections/contactsSection';
 
-import { imagePrefix } from '@/_consts';
+import { imagePrefix, MEDIA_KIT_URL } from '@/_consts';
 
 import styles from './styles.module.sass';
 
 const logoImageUrl ='itConnectLogoLarge';
-const MEDIA_KIT_URL = 'https://drive.google.com/drive/folders/1ZsNbV7p-Tw7PTSZQ2i-5cD06_UMut2yV';
 const contactCards = contactsArray
   .map((contact) => (
     <Link

@@ -1,5 +1,7 @@
 export const imagePrefix = 'https://res.cloudinary.com/dtecpsig5/image/upload/v1735083083/';
 
+export const MEDIA_KIT_URL = 'https://drive.google.com/drive/folders/1ZsNbV7p-Tw7PTSZQ2i-5cD06_UMut2yV';
+
 export type NavigationLinkType = {
   title: string;
   id: string;
