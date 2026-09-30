@@ -27,6 +27,7 @@ const logos = [
   { id: 'icthub-logo_2x_wvatml', src: 'icthub-logo_2x_wvatml', name: 'ICT Hub' },
   { id: 'Logo_i_text_transparent_pka3gq', src: 'Logo_i_text_transparent_pka3gq', name: 'Petlja' },
   { id: 'raskat_png_tmcccc', src: 'raskat_png_tmcccc', name: 'Raskat' },
+  { id: 'stroganov-main-white_x4inin', src: 'stroganov-main-white_x4inin', name: 'Stroganov' },
 ];
 
 export default function PartnersSection() {
