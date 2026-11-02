@@ -44,16 +44,69 @@
   text-transform: uppercase
   text-align: center
 
-.albums
+.recap
+  max-width: 760px
+  display: flex
+  flex-direction: column
+  gap: 12px
+  text-align: center
+
+.recapLead
+  color: #fff
+  font-size: 20px
+  font-weight: 700
+  line-height: 1.4
+  @media only screen and (max-width: 500px)
+    font-size: 16px
+
+.recapText
+  color: rgba(255, 255, 255, 0.75)
+  font-size: 16px
+  line-height: 1.6
+  @media only screen and (max-width: 500px)
+    font-size: 14px
+
+.team
   display: flex
   flex-wrap: wrap
   justify-content: center
   gap: 16px
+  width: 100%
   @media only screen and (max-width: 500px)
     flex-direction: column
-    width: 100%
 
-.albumBtn, .visitBtn
+.member
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 4px
+  min-width: 260px
+  padding: 20px 24px
+  border: 1px solid rgba(255, 255, 255, 0.15)
+  border-radius: 24px
+  background: rgba(255, 255, 255, 0.04)
+  @media only screen and (max-width: 500px)
+    min-width: 0
+
+.memberRole
+  color: rgba(255, 255, 255, 0.6)
+  font-size: 12px
+  text-transform: uppercase
+  letter-spacing: 0.1em
+
+.memberName
+  color: #fff
+  font-size: 18px
+  font-weight: 700
+
+.memberLinks
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: 8px
+  margin-top: 12px
+
+.photosBtn, .socialBtn, .visitBtn
   border-radius: 50px
   text-decoration: none
   text-align: center
@@ -62,27 +115,23 @@
   color: #fff
   &:hover
     transform: scale(1.05)
-  @media only screen and (max-width: 500px)
-    width: 100%
 
-.albumBtn
-  display: flex
-  flex-direction: column
-  align-items: center
-  padding: 10px 32px
+.photosBtn, .socialBtn
+  padding: 8px 18px
+  font-size: 14px
+  font-weight: 700
+
+.photosBtn
   background: #ea0028
   border: 2px solid #ea0028
   &:hover
     background: #c80022
     border-color: #c80022
 
-.albumCaption
-  font-size: 12px
-  opacity: 0.8
-
-.albumAuthor
-  font-size: 16px
-  font-weight: 700
+.socialBtn
+  border: 2px solid rgba(255, 255, 255, 0.4)
+  &:hover
+    background: rgba(255, 255, 255, 0.1)
 
 .visitBtn
   margin-top: 8px
@@ -92,3 +141,5 @@
   border: 2px solid #fff
   &:hover
     background: rgba(255, 255, 255, 0.1)
+  @media only screen and (max-width: 500px)
+    width: 100%
