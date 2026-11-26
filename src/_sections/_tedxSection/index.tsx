@@ -4,13 +4,7 @@ import styles from './styles.module.sass';
 
 const TEDX_SITE_URL = 'https://www.tedxsavskivenac.com/';
 
-const TEDX_RECAP = {
-  lead: 'TEDx Savski Venac 2026 has happened — and we are proud to have been part of it.',
-  paragraphs: [
-    'For one day, Startit Center turned into a room full of curious minds. Nine speakers, selected from 150 applications from 11 countries, took the stage with ideas around the theme Small Shifts, Big Impact. The conversations they sparked carried on through every break and long after the final talk.',
-    'Thank you to every speaker, guest, volunteer and partner who made this day possible. Small shifts really do add up — and this one was felt by everyone in the room.',
-  ],
-};
+const TEDX_RECAP = 'TEDx Savski Venac 2026 has happened — and we are proud to have been part of it.';
 
 type TeamMember = {
   name: string;
@@ -51,14 +45,7 @@ export default function TedxSection() {
           October 10, 2026 · Startit Center, Belgrade
         </div>
 
-        <div className={styles.recap}>
-          <p className={styles.recapLead}>{TEDX_RECAP.lead}</p>
-          {TEDX_RECAP.paragraphs.map((text) => (
-            <p key={text} className={styles.recapText}>
-              {text}
-            </p>
-          ))}
-        </div>
+        <p className={styles.recap}>{TEDX_RECAP}</p>
 
         <div className={styles.photosLabel}>Event photos & video team</div>
         <div className={styles.team}>

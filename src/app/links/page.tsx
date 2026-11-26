@@ -2,11 +2,20 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import {
+  CoffeeOutlined,
+  FolderOpenOutlined,
+  GlobalOutlined,
+  MailOutlined,
+  SafetyCertificateOutlined,
+  ShoppingOutlined,
+} from '@ant-design/icons';
 
 import Logo from '@/_assets/logo';
 import { contactsArray } from '@/_sections/contactsSection';
 
 import { MEDIA_KIT_URL } from '@/_consts';
+import { bebas, lobster } from '@/_styles/partyFonts';
 
 import styles from './styles.module.sass';
 
@@ -27,32 +36,32 @@ const otherLinks = [
   {
     title: 'Website',
     url: '/',
-    emoji: '🌐',
+    Icon: GlobalOutlined,
   },
   ...(emailContact ? [{
     title: 'Email us',
     url: emailContact.url,
-    emoji: '📩',
+    Icon: MailOutlined,
   }] : []),
   {
     title: 'Media Kit',
     url: MEDIA_KIT_URL,
-    emoji: '📁',
+    Icon: FolderOpenOutlined,
   },
   {
     title: 'Rules and Values',
     url: 'https://it-conect.notion.site/Rules-and-Values-of-the-IT-Connect-Community-3cd92f4ea08247b7881535ee7e8b8372',
-    emoji: '🤝',
+    Icon: SafetyCertificateOutlined,
   },
   {
     title: 'Buy us a coffee',
     url: 'https://buymeacoffee.com/itconnect',
-    emoji: '☕',
+    Icon: CoffeeOutlined,
   },
   {
     title: 'Shop',
     url: 'https://buymeacoffee.com/itconnect/extras',
-    emoji: '🛍️',
+    Icon: ShoppingOutlined,
   },
 ];
 
@@ -72,6 +81,12 @@ export default function LinksPage() {
         </header>
 
         <div className={styles.links}>
+          <Link href="/new-year-party" className={`${styles.event} ${lobster.variable} ${bebas.variable}`}>
+            <span className={styles.eventKicker}>New Year Party · December 19</span>
+            <span className={styles.eventTitle}>New Year == Old Code</span>
+            <span className={styles.eventButton}>Join the party</span>
+          </Link>
+
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Follow us</h2>
             {socialLinks.map((social) => (
@@ -103,7 +118,7 @@ export default function LinksPage() {
                 {...(isExternal(link.url) && { target: '_blank', rel: 'noreferrer' })}
                 className={styles.linkButton}
               >
-                <span className={styles.linkIcon} aria-hidden>{link.emoji}</span>
+                <link.Icon className={styles.linkIcon} aria-hidden />
                 <span className={styles.linkTitle}>{link.title}</span>
               </Link>
             ))}

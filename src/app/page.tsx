@@ -16,6 +16,7 @@ import SponsorsSection from '@/_sections/sponsorsSection';
 // import HighlightsSection from '@/_sections/highlightsSection';
 import MobileNavigation from '@/_sections/_mobileNavigation';
 import TedxSection from '@/_sections/_tedxSection';
+import NewYearSection from '@/_sections/_newYearSection';
 
 import { contactsArray } from '@/_sections/contactsSection';
 import { imagePrefix } from '@/_consts';
@@ -77,6 +78,7 @@ export default function Home() {
         <NavigationSection/>
         <HeaderSection/>
         {/*<HighlightsSection />*/}
+        <NewYearSection />
         <div id="tedx" />
         <TedxSection />
         <div id="events" />

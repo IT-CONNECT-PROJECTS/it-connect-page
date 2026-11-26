@@ -1,0 +1,63 @@
+$cream: #fff4dc
+$red: #b81d2c
+$mustard: #f2b632
+$ink: #2a1a17
+
+.section
+  width: min(90vw, 1312px)
+  margin: 0 auto 24px
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 16px
+  padding: 48px 24px
+  text-align: center
+  color: $cream
+  background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(#000, 0.12) 0deg 7.5deg, transparent 7.5deg 15deg), $red
+  border-bottom: 16px solid $ink
+  border-radius: 40px
+  @media only screen and (max-width: 500px)
+    border-radius: 24px
+    padding: 32px 16px
+
+.kicker, .button
+  font-family: var(--font-bebas)
+  letter-spacing: 2px
+
+.kicker
+  font-size: 20px
+
+.title
+  font-family: var(--font-lobster)
+  font-weight: 400
+  font-size: clamp(40px, 7vw, 80px)
+  line-height: 1.15
+  text-shadow: 3px 3px 0 $ink
+
+.operator
+  color: $mustard
+
+.operator, .nowrap
+  white-space: nowrap
+
+.text
+  font-size: 18px
+  line-height: 1.5
+
+.button
+  padding: 12px 32px
+  font-size: 24px
+  color: $ink
+  background: $cream
+  border: 3px solid $ink
+  border-radius: 12px
+  box-shadow: 5px 5px 0 $ink
+  transition: transform 0.15s, box-shadow 0.15s
+  &:hover
+    transform: translate(3px, 3px)
+    box-shadow: 2px 2px 0 $ink
+  &:focus-visible
+    outline: 3px dashed $mustard
+    outline-offset: 4px
+  @media (prefers-reduced-motion: reduce)
+    transition: none

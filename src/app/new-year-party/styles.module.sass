@@ -1,0 +1,239 @@
+$cream: #fff4dc
+$red: #b81d2c
+$teal: #8fd3c7
+$mustard: #f2b632
+$ink: #2a1a17
+
+=dots($color)
+  background-image: radial-gradient($color 18%, transparent 20%)
+  background-size: 28px 28px
+
+.page
+  width: 100%
+  // body is a flex row with a fixed height, so let the page grow past it
+  height: max-content
+  min-height: 100%
+  flex-shrink: 0
+  background-color: $cream
+  color: $ink
+  font-family: var(--font-onest)
+  text-align: center
+
+.hero
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 20px
+  padding: 32px 16px 64px
+  color: $cream
+  background: repeating-conic-gradient(from 0deg at 50% 45%, rgba(#000, 0.12) 0deg 7.5deg, transparent 7.5deg 15deg), $red
+
+.logo
+  display: flex
+
+.kicker, .cardLabel, .badge, .button, .homeLink
+  font-family: var(--font-bebas)
+  letter-spacing: 2px
+
+.kicker
+  font-size: 24px
+  margin-top: 24px
+
+.title
+  font-family: var(--font-lobster)
+  font-weight: 400
+  font-size: clamp(52px, 11vw, 128px)
+  line-height: 1.1
+  text-shadow: 3px 3px 0 $ink, 6px 6px 0 rgba($ink, 0.4)
+  transform: rotate(-3deg)
+
+.operator
+  color: $mustard
+  white-space: nowrap
+
+.slogan
+  font-family: var(--font-lobster)
+  font-size: clamp(24px, 4vw, 36px)
+
+.badge
+  padding: 8px 24px
+  font-size: 28px
+  color: $ink
+  background: $mustard
+  border: 3px solid $ink
+  border-radius: 999px
+  box-shadow: 4px 4px 0 $ink
+
+.buttons
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: 16px
+  margin-top: 8px
+
+.button
+  padding: 12px 28px
+  font-size: 24px
+  color: $ink
+  background: $cream
+  border: 3px solid $ink
+  border-radius: 12px
+  box-shadow: 5px 5px 0 $ink
+  transition: transform 0.15s, box-shadow 0.15s
+
+  &:hover
+    transform: translate(3px, 3px)
+    box-shadow: 2px 2px 0 $ink
+
+  &:focus-visible
+    outline: 3px dashed $mustard
+    outline-offset: 4px
+
+.checkers
+  height: 48px
+  background: repeating-conic-gradient($ink 0% 25%, $cream 0% 50%) 0 0 / 48px 48px
+
+.section
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 32px
+  padding: 64px 16px
+
+.section_teal
+  background-color: $teal
+  +dots(rgba(#fff, 0.5))
+
+.heading
+  font-family: var(--font-lobster)
+  font-weight: 400
+  font-size: clamp(34px, 6vw, 56px)
+  line-height: 1.2
+  color: $red
+
+  .section_teal &
+    color: $ink
+
+.text
+  max-width: 640px
+  font-size: 18px
+  line-height: 1.6
+
+.details, .program, .menu
+  list-style: none
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: 24px
+
+.card
+  width: 280px
+  display: flex
+  flex-direction: column
+  gap: 8px
+  padding: 24px 16px
+  background: #fff
+  border: 3px solid $ink
+  border-radius: 120px 120px 16px 16px
+  box-shadow: 6px 6px 0 $red
+
+.cardLabel
+  font-size: 22px
+  color: $red
+
+.cardValue
+  font-family: var(--font-bebas)
+  font-weight: 400
+  font-size: 34px
+
+.program
+  max-width: 900px
+
+.record
+  width: 220px
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 16px
+  font-weight: 700
+
+// vinyl record with the emoji on its label
+.recordLabel
+  width: 160px
+  height: 160px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 36px
+  border-radius: 50%
+  background: radial-gradient(circle, $mustard 0 32%, transparent 33%), repeating-radial-gradient(circle, #161010 0 3px, #33282a 4px 5px)
+  box-shadow: 5px 5px 0 rgba($ink, 0.35)
+  transition: transform 0.6s
+
+  .record:hover &
+    transform: rotate(360deg)
+
+.menu li
+  padding: 12px 24px
+  font-size: 18px
+  border: 2px dashed $red
+  border-radius: 999px
+
+.ticket
+  width: 100%
+  max-width: 720px
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 16px
+  padding: 40px 24px
+  background: $mustard
+  border: 3px dashed $ink
+  border-radius: 24px
+  box-shadow: 8px 8px 0 $red
+
+  .cardLabel
+    color: $ink
+
+.price
+  font-family: var(--font-bebas)
+  font-size: clamp(64px, 14vw, 112px)
+  line-height: 1
+
+.footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 20px
+  padding: 56px 16px
+  font-size: 18px
+  line-height: 1.6
+  color: $cream
+  background: $ink
+
+.homeLink
+  font-size: 22px
+  color: $mustard
+  text-decoration: underline
+
+@media only screen and (max-width: 500px)
+  .program
+    width: 100%
+    gap: 20px 12px
+
+  .record
+    width: calc(50% - 6px)
+    gap: 8px
+    font-size: 14px
+
+  .recordLabel
+    width: 104px
+    height: 104px
+    font-size: 24px
+
+@media (prefers-reduced-motion: reduce)
+  .button, .recordLabel
+    transition: none
+
+  .record:hover .recordLabel
+    transform: none
